@@ -1,2 +1,2 @@
 # MDIA-1620
-This is my repo for MDIA-1620 the best class ever! (❁´◡`❁)
+This holds all my homework for the course!
