@@ -93,3 +93,9 @@ console.log(visitorMessage)
 console.log(latePaymentMessage)
 
 // MAKING CHANGES TO THIS FILE FOR THIS NEW BRANCH
+// MAKING ANOTHER CHANGE TO THIS FILE!
+
+// BLAH BLAH BLAH
+if (true) {
+    console.log("HI");
+}
