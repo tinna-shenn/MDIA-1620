@@ -62,9 +62,9 @@ let jonathan = {
     favouriteTreat: "Blueberries",
     age: 7,
     monthlyRent: 500,
-    isHorseInside = true,
-    homeTown = "Coquitlam",
-    topSpeed = 88 // km/h
+    isHorseInside: true,
+    homeTown: "Coquitlam",
+    topSpeed: 88 // km/h
 }
 
 let applePie = {
@@ -73,10 +73,9 @@ let applePie = {
     favouriteTreat: "Grass",
     age: 8,
     monthlyRent: 800,
-    isHorseInside = false,
-    homeTown = "Burnaby",
-    topSpeed = 70 // km/h
-
+    isHorseInside: false,
+    homeTown: "Burnaby",
+    topSpeed: 70 // km/h
 }
 
 let tinyTuna = {
@@ -85,8 +84,23 @@ let tinyTuna = {
     favouriteTreat: "Fish",
     age: 3,
     monthlyRent: 1000,
-    isHorseInside = false,
-    homeTown = "Downtown Vancouver"
-    topSpeed = 76 // km/h
+    isHorseInside: false,
+    homeTown: "Surrey"
+    topSpeed: 76 // km/h
+}
 
+// Horse Array
+let horses = [jonathan, applePie, tinyTuna, timmyTurner]
+
+// New Horse Stabled
+
+let timmyTurner = {
+    name: "Timmy Turner",
+    nickname: "Tim Turn",
+    favouriteTreat: "Scrambled cake, three strips of chocolate and a big bowl of frosting",
+    age: 5,
+    monthlyRent: 1500,
+    isHorseInside: true,
+    homeTown: "California",
+    topSpeed: 60 ,// km/h
 }
