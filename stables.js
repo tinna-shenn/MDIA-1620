@@ -53,49 +53,38 @@
 // NOTE: UNLESS SPECIFIED, VARIABLE NAMING IS UP TO YOU. THERE SHOULD BE NO HARD-CODED
 // NUMBERS OR STRINGS WHERE VARIBALES WOULD BE PREFERRED.
 
-//------------------------- Seting up shop (Assignment 1) -------------------------//
+//------------------------- First day (Assignment 2) -------------------------//
 
-// Horse Variables
-let jonRent = 500
-let jon = {
-    name: "Jon",
+// Horse Objects
+let jonathan = {
+    name: "Jonathan",
+    nickname: "Jon"
+    favouriteTreat: "Blueberries",
     age: 7,
-    favouriteSnack: "Blueberries",
-    monthlyRent: jonRent,
-    lateRent: jonRent + 500 * (0.2) // monthly rate with 20% late fee total
+    monthlyRent: 500,
+    isHorseInside = true,
+    homeTown = "Coquitlam",
+    
 }
 
-let appleRent = 800
-let apple = {
-    name: "Apple",
+let applePie = {
+    name: "Apple Pie",
+    nickname: "Apple",
+    favouriteTreat: "Grass",
     age: 8,
-    favouriteSnack: "Grass",
-    monthlyRent: appleRent,
-    lateRent: appleRent + 800 * (0.2) // monthly rate with 20% late fee total
+    monthlyRent: 800,
+    isHorseInside = false,
+    homeTown = "Burnaby",
+
 }
 
-let tunaRent = 1000
-let tuna = {
-    name: "Tuna",
+let tinyTuna = {
+    name: "Tiny Tuna",
+    nickname: "Tuna",
+    favouriteTreat: "Fish",
     age: 3,
-    favouriteSnack: "Fish",
-    monthlyRent: tunaRent,
-    lateRent: tunaRent + 1000 * (0.2) // monthly rate with 20% late fee total
-}
+    monthlyRent: 1000,
+    isHorseInside = false,
+    homeTown = "Downtown Vancouver"
 
-// Stable Variables
-let stableName = "The Terrific Stable!"
-let visitorMessage = `Welcome to ${stableName}!`
-let latePaymentMessage = `It would cost ${jon.monthlyRent} to board ${jon.name} for one month. If the payment is late it would cost ${jon.lateRent} to board ${jon.name} for one month.`
-
-// Console Log
-console.log(visitorMessage)
-console.log(latePaymentMessage)
-
-// MAKING CHANGES TO THIS FILE FOR THIS NEW BRANCH
-// MAKING ANOTHER CHANGE TO THIS FILE!
-
-// BLAH BLAH BLAH
-if (true) {
-    console.log("HI");
 }
