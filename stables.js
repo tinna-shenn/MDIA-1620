@@ -53,41 +53,91 @@
 // NOTE: UNLESS SPECIFIED, VARIABLE NAMING IS UP TO YOU. THERE SHOULD BE NO HARD-CODED
 // NUMBERS OR STRINGS WHERE VARIBALES WOULD BE PREFERRED.
 
-//------------------------- Seting up shop (Assignment 1) -------------------------//
+//------------------------- First day (Assignment 2) -------------------------//
 
-// Horse Variables
-let jonRent = 500
-let jon = {
-    name: "Jon",
+// Horse Objects
+let jonathan = {
+    name: "Jonathan",
+    nickname: "Jon",
+    favouriteTreat: "Blueberries",
     age: 7,
-    favouriteSnack: "Blueberries",
-    monthlyRent: jonRent,
-    lateRent: jonRent + 500 * (0.2) // monthly rate with 20% late fee total
+    monthlyRent: 500,
+    isHorseInside: true,
+    homeTown: "Coquitlam",
+    topSpeed: 88 // km/h
 }
 
-let appleRent = 800
-let apple = {
-    name: "Apple",
+let applePie = {
+    name: "Apple Pie",
+    nickname: "Apple",
+    favouriteTreat: "Grass",
     age: 8,
-    favouriteSnack: "Grass",
-    monthlyRent: appleRent,
-    lateRent: appleRent + 800 * (0.2) // monthly rate with 20% late fee total
+    monthlyRent: 800,
+    isHorseInside: false,
+    homeTown: "Burnaby",
+    topSpeed: 70 // km/h
 }
 
-let tunaRent = 1000
-let tuna = {
-    name: "Tuna",
+let tinyTuna = {
+    name: "Tiny Tuna",
+    nickname: "Tuna",
+    favouriteTreat: "Fish",
     age: 3,
-    favouriteSnack: "Fish",
-    monthlyRent: tunaRent,
-    lateRent: tunaRent + 1000 * (0.2) // monthly rate with 20% late fee total
+    monthlyRent: 1000,
+    isHorseInside: false,
+    homeTown: "Surrey",
+    topSpeed: 76 // km/h
 }
 
-// Stable Variables
-let stableName = "The Terrific Stable!"
-let visitorMessage = `Welcome to ${stableName}!`
-let latePaymentMessage = `It would cost ${jon.monthlyRent} to board ${jon.name} for one month. If the payment is late it would cost ${jon.lateRent} to board ${jon.name} for one month.`
 
-// Console Log
-console.log(visitorMessage)
-console.log(latePaymentMessage)
+// Horse Array
+let horses = [jonathan, applePie, tinyTuna]
+
+
+// New Horse Stabled
+
+let timmyTurner = {
+    name: "Timmy Turner",
+    nickname: "Tim Turn",
+    favouriteTreat: "Scrambled cake, three strips of chocolate and a big bowl of frosting",
+    age: 5,
+    monthlyRent: 1500,
+    isHorseInside: true,
+    homeTown: "California",
+    topSpeed: 60 ,// km/h
+}
+
+horses.push(timmyTurner);
+
+
+// Check if horses are hungry or not
+horses[0].isHungry = false;
+horses[1].isHungry = true;
+horses[2].isHungry = false;
+horses[3].isHungry = true;
+
+// Stall Variables
+let totalStalls = 8;
+
+function logStallsAvailable(totalStalls) {
+    let stallsAvailableCount = totalStalls - horses.length;
+    console.log(`There are ${stallsAvailableCount} stalls available out of ${totalStalls} total stalls.`)
+}
+logStallsAvailable(totalStalls);
+
+
+// Rent Owed
+function logOwedRent(horse) {
+    let lateFee = 100;
+    let owedRent = horse.monthlyRent + lateFee;
+    console.log(`${horse.name} owes ${owedRent} total (${horse.monthlyRent} rent + ${lateFee} late fee due to late payment)`)
+}
+logOwedRent(horses[0])
+
+// Nicknames of the Horse
+function getNickname(horse) {
+    return horse.nickname;
+}
+
+let horseNickname = getNickname(horses[0]);
+console.log(horseNickname);
