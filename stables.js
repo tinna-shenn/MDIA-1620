@@ -64,7 +64,7 @@ let jonathan = {
     monthlyRent: 500,
     isHorseInside = true,
     homeTown = "Coquitlam",
-    
+    topSpeed = 88 // km/h
 }
 
 let applePie = {
@@ -75,6 +75,7 @@ let applePie = {
     monthlyRent: 800,
     isHorseInside = false,
     homeTown = "Burnaby",
+    topSpeed = 70 // km/h
 
 }
 
@@ -86,5 +87,6 @@ let tinyTuna = {
     monthlyRent: 1000,
     isHorseInside = false,
     homeTown = "Downtown Vancouver"
+    topSpeed = 76 // km/h
 
 }
