@@ -89,8 +89,10 @@ let tinyTuna = {
     topSpeed: 76 // km/h
 }
 
+
 // Horse Array
 let horses = [jonathan, applePie, tinyTuna]
+
 
 // New Horse Stabled
 
@@ -105,7 +107,7 @@ let timmyTurner = {
     topSpeed: 60 ,// km/h
 }
 
-horses.push("timmyTurner");
+horses.push(timmyTurner);
 
 
 // Check if horses are hungry or not
@@ -117,10 +119,12 @@ horses[3].isHungry = true;
 // Stall Variables
 let totalStalls = 8;
 
-function stallsAvailable(totalStalls) {
-    let stallsAvailable = totalStalls - horses.length;
-    console.log(`There are ${stallsAvailable} stalls availabile out of ${totalStalls} total stalls.`)
+function logStallsAvailable(totalStalls) {
+    let stallsAvailableCount = totalStalls - horses.length;
+    console.log(`There are ${stallsAvailableCount} stalls available out of ${totalStalls} total stalls.`)
 }
+logStallsAvailable(totalStalls);
+
 
 // Rent Owed
 function logOwedRent(horse) {
@@ -128,7 +132,6 @@ function logOwedRent(horse) {
     let owedRent = horse.monthlyRent + lateFee;
     console.log(`${horse.name} owes ${owedRent} total (${horse.monthlyRent} rent + ${lateFee} late fee due to late payment)`)
 }
-
 logOwedRent(horses[0])
 
 // Nicknames of the Horse
