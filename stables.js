@@ -58,7 +58,7 @@
 // Horse Objects
 let jonathan = {
     name: "Jonathan",
-    nickname: "Jon"
+    nickname: "Jon",
     favouriteTreat: "Blueberries",
     age: 7,
     monthlyRent: 500,
@@ -85,12 +85,12 @@ let tinyTuna = {
     age: 3,
     monthlyRent: 1000,
     isHorseInside: false,
-    homeTown: "Surrey"
+    homeTown: "Surrey",
     topSpeed: 76 // km/h
 }
 
 // Horse Array
-let horses = [jonathan, applePie, tinyTuna, timmyTurner]
+let horses = [jonathan, applePie, tinyTuna]
 
 // New Horse Stabled
 
@@ -104,3 +104,37 @@ let timmyTurner = {
     homeTown: "California",
     topSpeed: 60 ,// km/h
 }
+
+horses.push("timmyTurner");
+
+
+// Check if horses are hungry or not
+horses[0].isHungry = false;
+horses[1].isHungry = true;
+horses[2].isHungry = false;
+horses[3].isHungry = true;
+
+// Stall Variables
+let totalStalls = 8;
+
+function stallsAvailable(totalStalls) {
+    let stallsAvailable = totalStalls - horses.length;
+    console.log(`There are ${stallsAvailable} stalls availabile out of ${totalStalls} total stalls.`)
+}
+
+// Rent Owed
+function logOwedRent(horse) {
+    let lateFee = 100;
+    let owedRent = horse.monthlyRent + lateFee;
+    console.log(`${horse.name} owes ${owedRent} total (${horse.monthlyRent} rent + ${lateFee} late fee due to late payment)`)
+}
+
+logOwedRent(horses[0])
+
+// Nicknames of the Horse
+function getNickname(horse) {
+    return horse.nickname;
+}
+
+let horseNickname = getNickname(horses[0]);
+console.log(horseNickname);
