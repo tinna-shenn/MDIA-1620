@@ -119,7 +119,7 @@ horses[3].isHungry = true;
 // Stall Variables
 let totalStalls = 8;
 
-function logStallsAvailable(totalStalls) {
+function logStallsAvailable(stalls) {
     let stallsAvailableCount = totalStalls - horses.length;
     console.log(`There are ${stallsAvailableCount} stalls available out of ${totalStalls} total stalls.`)
 }
