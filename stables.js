@@ -138,7 +138,7 @@ let horseNickname = getNickname(horses[0]);
 console.log(horseNickname);
 
 //------------------------- Day to day operations (Project) -------------------------//
-let treat = "Scrambled cake, three strips of chocolate and a big bowl of frosting";
+let treat = "Grass";
 
 // Find out if horse likes particular treat.
 for (const horse of horses) {
@@ -151,7 +151,7 @@ for (const horse of horses) {
 }
 
 // Horse Hometowns
-function logHorseHomeTown(horse) {
+function logHorseHomeTown(horseArray) {
     for (const horse of horses) {
         console.log(`${horse.name} is from ${horse.homeTown}.`);
     }
@@ -168,3 +168,14 @@ function logMoveHorsesOutside(horsesToMove) {
 logMoveHorsesOutside([jonathan]);
 logMoveHorsesOutside([applePie, tinyTuna]);
 
+// Feeding Horses!
+function logFeedHorses(horsesToFeed) {
+    for (const horse of horsesToFeed) {
+        if (horse.isHorseInside===false) {
+            console.log(`${horse.name} has been brought back inside for a treat!`)
+        } else {
+            console.log(`${horse.name} has been fed a treat 😎.`)
+        }
+    }
+}
+logFeedHorses(horses)
