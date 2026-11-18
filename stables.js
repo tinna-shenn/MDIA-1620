@@ -42,18 +42,7 @@
 //                                                         ####
 //                                                          ##
 //
-// This is a template for your assignments and final project. You'll be setting up a stable and making
-// sure it runs smoothly.
-//
-// Please do not create a new file for each assignment!
-// Feel free to keep the headings (e.g.: "Variables"), but please delete any boilerplate
-// comments. E.g.: those seen on lines 58 - 68, for example. They are usually providing directions. 
-// (Your own comments, where necessary, are acceptable.)
-//
-// NOTE: UNLESS SPECIFIED, VARIABLE NAMING IS UP TO YOU. THERE SHOULD BE NO HARD-CODED
-// NUMBERS OR STRINGS WHERE VARIBALES WOULD BE PREFERRED.
-
-//------------------------- First day (Assignment 2) -------------------------//
+// ----------------------- First day (Assignment 2) -------------------------//
 
 // Horse Objects
 let jonathan = {
@@ -152,40 +141,38 @@ for (const horse of horses) {
 
 // Horse Hometowns
 function logHorseHomeTown(horseArray) {
-    for (const horse of horses) {
+    for (const horse of horseArray) {
         console.log(`${horse.name} is from ${horse.homeTown}.`);
     }
 }
 logHorseHomeTown(horses);
 
-// Moving Horses Outside
-function logMoveHorsesOutside(horsesToMove) {
+// Moving Horses Outside/Bedtime
+function logMoveHorses(horsesToMove, isDark) {
     for (const horse of horsesToMove) {
-        isHorseInside = false;
-        console.log(`${horse.name} went outside to spend some time in the sun ☀️!`);
+        if (isDark && !horse.isHorseInside) {
+            horse.isHorseInside = true;
+            console.log(`${horse.name} has been called back inside for sleepy time 💤`);
+        } else if (!isDark && horse.isHorseInside) {
+            horse.isHorseInside = false;
+            console.log(`${horse.name} went outside to spend some time in the sun ☀️!`)
+        }
     }
 }
-logMoveHorsesOutside([jonathan]);
-logMoveHorsesOutside([applePie, tinyTuna]);
+logMoveHorses([jonathan]);
+logMoveHorses([applePie, tinyTuna]);
 
 // Feeding Horses!
 function logFeedHorses(horsesToFeed) {
     for (const horse of horsesToFeed) {
-        if (horse.isHorseInside===false) {
-            console.log(`${horse.name} has been brought back inside for a treat!`);
-        } else {
-            console.log(`${horse.name} has been fed a treat 😎.`);
-        }
+        if (!horse.isHorseInside) {
+            console.log(`${horse.name} has been called back inside for a treat!`);
+        } 
+        horse.isHungry = false;
+        console.log(`${horse.name} has been fed a treat 😎.`)
     }
 }
 logFeedHorses(horses)
 
-// Bedtime
-function logCallHorses(horsesToSleep) {
-    for (const horse of horsesToSleep) {
-    if (horse.isHorseInside===false) {
-        console.log(`${horse.name} has been called back inside for sleepy time, its getting dark!`);
-        } 
-    }
-}
-logCallHorses(horses)
+
+// BONUS
