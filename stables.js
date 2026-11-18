@@ -158,3 +158,13 @@ function logHorseHomeTown(horse) {
 }
 logHorseHomeTown(horses);
 
+// Moving Horses Outside
+function logMoveHorsesOutside(horsesToMove) {
+    for (const horse of horsesToMove) {
+        isHorseInside = false;
+        console.log(`${horse.name} went outside to spend some time in the sun ☀️!`)
+    }
+}
+logMoveHorsesOutside([jonathan]);
+logMoveHorsesOutside([applePie, tinyTuna]);
+
