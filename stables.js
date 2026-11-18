@@ -136,3 +136,16 @@ function getNickname(horse) {
 
 let horseNickname = getNickname(horses[0]);
 console.log(horseNickname);
+
+//------------------------- Day to day operations (Project) -------------------------//
+let treat = "Blueberries";
+
+for (const horse of horses) {
+    if (horse.favouriteTreat===treat){
+    console.log(`${horse.name} likes this treat! 🥰`)
+    break;
+    } else {
+        console.log(`${horse.name} does not like this treat. ☹️`)
+    }
+}
+// using else statement https://www.w3schools.com/js/js_if_else.asp
