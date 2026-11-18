@@ -162,7 +162,7 @@ logHorseHomeTown(horses);
 function logMoveHorsesOutside(horsesToMove) {
     for (const horse of horsesToMove) {
         isHorseInside = false;
-        console.log(`${horse.name} went outside to spend some time in the sun ☀️!`)
+        console.log(`${horse.name} went outside to spend some time in the sun ☀️!`);
     }
 }
 logMoveHorsesOutside([jonathan]);
@@ -172,10 +172,20 @@ logMoveHorsesOutside([applePie, tinyTuna]);
 function logFeedHorses(horsesToFeed) {
     for (const horse of horsesToFeed) {
         if (horse.isHorseInside===false) {
-            console.log(`${horse.name} has been brought back inside for a treat!`)
+            console.log(`${horse.name} has been brought back inside for a treat!`);
         } else {
-            console.log(`${horse.name} has been fed a treat 😎.`)
+            console.log(`${horse.name} has been fed a treat 😎.`);
         }
     }
 }
 logFeedHorses(horses)
+
+// Bedtime
+function logCallHorses(horsesToSleep) {
+    for (const horse of horsesToSleep) {
+    if (horse.isHorseInside===false) {
+        console.log(`${horse.name} has been called back inside for sleepy time, its getting dark!`);
+        } 
+    }
+}
+logCallHorses(horses)
