@@ -53,7 +53,10 @@ let jonathan = {
     monthlyRent: 500,
     isHorseInside: true,
     homeTown: "Coquitlam",
-    topSpeed: 88 // km/h
+    topSpeed: 88, // km/h
+    toggleLocation: function () {
+        this.isHorseInside = !this.isHorseInside;
+    }
 }
 
 let applePie = {
@@ -64,7 +67,10 @@ let applePie = {
     monthlyRent: 800,
     isHorseInside: false,
     homeTown: "Burnaby",
-    topSpeed: 70 // km/h
+    topSpeed: 70, // km/h
+    toggleLocation: function () {
+        this.isHorseInside = !this.isHorseInside;
+    }
 }
 
 let tinyTuna = {
@@ -75,7 +81,10 @@ let tinyTuna = {
     monthlyRent: 1000,
     isHorseInside: false,
     homeTown: "Surrey",
-    topSpeed: 76 // km/h
+    topSpeed: 76, // km/h
+    toggleLocation: function () {
+        this.isHorseInside = !this.isHorseInside;
+    }
 }
 
 
@@ -92,7 +101,10 @@ let timmyTurner = {
     monthlyRent: 1500,
     isHorseInside: true,
     homeTown: "California",
-    topSpeed: 60 , // km/h
+    topSpeed: 60, // km/h
+    toggleLocation: function () {
+        this.isHorseInside = !this.isHorseInside;
+    }
 }
 horses.push(timmyTurner);
 
@@ -181,4 +193,9 @@ logMoveHorses([jonathan], false);
 logMoveHorses([timmyTurner], false);
 logMoveHorses(horses);
 logMoveHorses(horses, false);
+
+// BONUS
+console.log(`is ${jonathan.name} inside? ${jonathan.isHorseInside}`);
+jonathan.toggleLocation();
+console.log(`is ${jonathan.name} inside? ${jonathan.isHorseInside}`);
 
