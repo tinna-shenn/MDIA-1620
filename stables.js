@@ -92,7 +92,7 @@ let timmyTurner = {
     monthlyRent: 1500,
     isHorseInside: true,
     homeTown: "California",
-    topSpeed: 60 ,// km/h
+    topSpeed: 60 , // km/h
 }
 horses.push(timmyTurner);
 
@@ -140,12 +140,30 @@ for (const horse of horses) {
 }
 
 // Horse Hometowns
-function logHorseHomeTown(horseArray) {
-    for (const horse of horseArray) {
-        console.log(`${horse.name} is from ${horse.homeTown}.`);
+function logHorseHomeTown(horse) {
+        if (horse.homeTown === "California") {
+            console.log(`${horse.name} is a long way from home in ${horse.homeTown}.`);
+        } else {
+            console.log(`${horse.name} is from ${horse.homeTown}.`)
+        }
+    }
+
+for (const horse of horses) {
+logHorseHomeTown(horse);
+}
+
+// Feeding Horses!
+function logFeedHorses(horsesToFeed) {
+    for (const horse of horsesToFeed) {
+        if (!horse.isHorseInside) {
+            horse.isHorseInside = true;
+            console.log(`${horse.name} has been called back inside for a treat!`);
+        } 
+        horse.isHungry = false;
+        console.log(`${horse.name} has been fed a treat 😎.`)
     }
 }
-logHorseHomeTown(horses);
+logFeedHorses(horses)
 
 // Moving Horses Outside/Bedtime
 function logMoveHorses(horsesToMove, isDark) {
@@ -159,20 +177,8 @@ function logMoveHorses(horsesToMove, isDark) {
         }
     }
 }
-logMoveHorses([jonathan]);
-logMoveHorses([applePie, tinyTuna]);
+logMoveHorses([jonathan], false);
+logMoveHorses([timmyTurner], false);
+logMoveHorses(horses);
+logMoveHorses(horses, false);
 
-// Feeding Horses!
-function logFeedHorses(horsesToFeed) {
-    for (const horse of horsesToFeed) {
-        if (!horse.isHorseInside) {
-            console.log(`${horse.name} has been called back inside for a treat!`);
-        } 
-        horse.isHungry = false;
-        console.log(`${horse.name} has been fed a treat 😎.`)
-    }
-}
-logFeedHorses(horses)
-
-
-// BONUS
